@@ -16,3 +16,7 @@ Though the dash app has not yet been launched, production of the visualizations 
 
 ![](img/titanic_survival_cabin_plot.png)
 
+![](img/class_plot_in_r.png)
+
+![](img/titanic_deck_plot.png)
+

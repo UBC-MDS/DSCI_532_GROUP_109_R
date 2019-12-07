@@ -14,5 +14,5 @@ In additional to this visualization, two bar graphs allow users to see the aggre
 
 Though the dash app has not yet been launched, production of the visualizations that will go in the dashboard is well underway. A screenshot of the current state of the visualiztions is included below:
 
-![](img/titanic_survival_cabin_plot.png)
+![](img/plot_progress.png)
 

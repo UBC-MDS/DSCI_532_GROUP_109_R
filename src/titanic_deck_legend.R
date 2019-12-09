@@ -1,16 +1,16 @@
 library(tidyverse)
 library(ggplot2)
 
-# data frames
-deck_legend_frame <- data.frame(x = c(0, 0, 10, 10),
-                                y = c(0, 700, 700, 0))
-
-deck_legend_letters = data.frame(x = c(5, 5, 5, 5, 5, 5, 5),
-                                 y = c(50, 150, 250, 350, 450, 550, 650),
-                                 label = c("G", "F", "E", "D", "C", "B", "A"))
-
-# deck legend
+# plot deck legend
 make_deck_legend <- function(deck_level ='B') {
+        
+        deck_legend_frame <- data.frame(x = c(0, 0, 10, 10),
+                                        y = c(0, 700, 700, 0))
+        
+        deck_legend_letters = data.frame(x = c(5, 5, 5, 5, 5, 5, 5),
+                                         y = c(50, 150, 250, 350, 450, 550, 650),
+                                         label = c("G", "F", "E", "D", "C", "B", "A"))
+        
         ggplot() + 
                 # frame
                 geom_line(data = deck_legend_frame, 
@@ -57,4 +57,3 @@ make_deck_legend <- function(deck_level ='B') {
                            alpha = 0.4)
 }
 
-make_deck_legend()

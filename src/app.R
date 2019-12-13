@@ -38,7 +38,7 @@ graph3 <- dccGraph(
 app$layout(
   htmlDiv(
     list(
-      htmlH1('Titanic'),
+      htmlH1('Fate of Titanic Passengers by Location on Ship'),
       htmlH2('Description'),
       #selection components go here
       htmlIframe(height=15, width=10, style=list(borderWidth = 0)), #space

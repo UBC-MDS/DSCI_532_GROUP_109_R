@@ -23,7 +23,7 @@ deckDropdown <- dccDropdown(
     list(label = "F", value = "F"),
     list(label = "G", value = "G")
   ),
-  value = "F" 
+  value = "C" 
 )
 
 graph <- dccGraph(

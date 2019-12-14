@@ -34,6 +34,65 @@ make_cabin_survival_plot <- function(deck_level = "C") {
   ggplotly(chart)
 }
 
+
+make_died_legend <- function() {
+  
+  died_legend <- data.frame(x = c(0, -1),
+                            y = c(0, 0),
+                            z = c("Passenger Died", ""),
+                            color = c("red", "white"))
+  
+  chart <- ggplot(died_legend, aes(x = x, y = y)) +
+    geom_point(fill = died_legend$color,
+               color = "black",
+               shape = 21,
+               size = 3.5,
+               show.legend = FALSE) +
+    xlim(0, 12) +
+    ylim(0, 0.1) +
+    geom_text(label = died_legend$z,
+              hjust = 0,
+              nudge_x = 1.5) +
+    theme(panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.background = element_blank(),
+          axis.line = element_blank(),
+          axis.text = element_blank(),
+          axis.ticks = element_blank(),
+          axis.title = element_blank())
+  ggplotly(chart)
+}
+
+
+make_survived_legend <- function() {
+  
+  survived_legend <- data.frame(x = c(0, -1),
+                                y = c(0, 0),
+                                z = c("Passenger Survived", ""),
+                                color = c("white", "white"))
+  
+  chart <- ggplot(survived_legend, aes(x = x, y = y)) +
+    geom_point(fill = survived_legend$color,
+               color = "black",
+               shape = 21,
+               size = 3.5,
+               show.legend = FALSE) +
+    xlim(0, 12) +
+    ylim(0, 0.1) +
+    geom_text(label = survived_legend$z,
+              hjust = 0,
+              nudge_x = 1.7) +
+    theme(panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.background = element_blank(),
+          axis.line = element_blank(),
+          axis.text = element_blank(),
+          axis.ticks = element_blank(),
+          axis.title = element_blank())
+  ggplotly(chart)
+}
+
+
 make_deck_legend <- function(deck_level = "C") {
   
   deck_legend_frame <- data.frame(x = c(0, 0, 4, 4),
@@ -91,6 +150,7 @@ make_deck_legend <- function(deck_level = "C") {
   ggplotly(chart)
 }
 
+
 make_deck_plot <- function() {
   
   titanic_deck_df = read.csv("data/wrangled_titanic_df.csv")
@@ -140,6 +200,7 @@ facet_plots1 <- function() {
   
   subplot(plot1, plot2, nrows = 1, titleX = TRUE, titleY = TRUE)
 }
+
 
 facet_plots2 <- function(deck_level = "C") {
   plot1 <- make_cabin_survival_plot(deck_level)

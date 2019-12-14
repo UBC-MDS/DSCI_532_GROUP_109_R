@@ -30,22 +30,25 @@ graph <- dccGraph(
   figure = facet_plots2()
 )
 
+
 graph3 <- dccGraph(
   id = 'deck_graph',
   figure = facet_plots1()
 )
 
+
 app$layout(
   htmlDiv(
     list(
       htmlImg(src='https://github.com/RobBlumberg/titanic_image/blob/master/titanic_header_new.png?raw=true', width='1780px'),
-      htmlH4('The sinking of the Titanic on April 12, 1912 four days into its maiden voyage as the world’s largest ocean liner is one of the worst maritime disasters of all time which killed over 1,500 of the estimated 2,224 passengers and crew on board. This app has been created to support an exploratory research proposal on the correlation of passenger location with survival rates which may be used to improve and democratize safety in the design of large passenger ships.'),
+      htmlH2('The sinking of the Titanic on April 12, 1912 four days into its maiden voyage as the world’s largest ocean liner is one of the worst maritime disasters of all time which killed over 1,500 of the estimated 2,224 passengers and crew on board. This app has been created to support an exploratory research proposal on the correlation of passenger location with survival rates which may be used to improve and democratize safety in the design of large passenger ships.'),
       #selection components go here
       htmlIframe(height=15, width=10, style=list(borderWidth = 0)), #space
       htmlLabel('Select deck level'),
       deckDropdown,
       #end selection components
       graph,
+      htmlImg(src='https://github.com/gptzjs/DSCI_532_GROUP_109_R/blob/master/img/survival_legend.png?raw=true', width='500px'),
       graph3,
       htmlIframe(height=20, width=10, style=list(borderWidth = 0)) #space
     )

@@ -1,51 +1,14 @@
-Using our dashboard we attempted to answer the following research question:  
+After milestone 3 feedback from peers and TA, we decided to implement some changes and not implement others.
 
-*Is there a relationship between cabin location of passengers and their survival rates on the Titanic which can help inform ship design and safety policies?*  
+We decided to implement five peer-recommended changes: reposition the dropdown bar for deck level, change the font size of note about adjusting the browser, change the color of bars in the horizontal bar chart, change the default deck level, and add a note for the tooltip.
+We decided NOT to implement four peer-recommended changes: add a note or label to show that the square shape in the titanic visualization represented an empty cabin, show which cabins belong to which class on each deck level, change the word “location” to “deck level”, and decreasing the size of the titanic image.
 
-To answer this question, the first visualization of our dashboard allows users to navigate different decks of the ship and see where passengers died or survived. A cruise line designer could focus in on "death clusters" to find out if there were sub-standard safety features implemented in those areas of the ship. Our second visualization, the "survival rate by deck level" plot gives a general overview showing whether or not certain deck levels were lacking in safety features compared to others. Similarly, the "survival rate by class" plot helps show a general overview of differences in safety features between cabins of varying classes. Overall, dashboard does well in addressing our research question.
+We were also working on implementing audio in the form of the popular Titanic theme song towards the end of milestone 3 but needed to be debugged for R at the time. 
 
-Based on TA and peer feedback, we observed that the use of the dropdown as the single interactive feature in combination with the two static horizontal bar charts for survival rates by class and deck is effective at showing how passenger fates vary with these two attributes which is difficult to visualize in two dimensions on a single plot since all three classes of passenger cabins (1-3) are found on all seven decks (A-G).
+(more on whether or not the music worked out)
 
-In its current form, the dashboard does not consider passenger fates by other attributes such as gender, age, marital status, or port of origin which are interesting but separate research questions requiring additional visualizations. To enhance the visualization of the current research question, we could also consider using colour to encode the three classes in the deck levels legend where the area of each colour is proportional to the share of its corresponding cabins class on each deck level. A more ambitious improvement would be to create a 3D interactive visualization of the ship which would allow the user to rotate the ship about the x, y and z axes to visualize passenger fate by specific cabin class, deck and nautical location at a single glance (i.e. bow-stern, port-starboard) with tooltips providing additional passenger attributes which could be explored.
+In milestone 4, we received 2 suggestions from TA feedback. 
 
-Our dashboard had several important limitations that need to be considered, especially when trying to draw conclusions to answer the research question. First, our visualization assumes that all passengers were in their cabins at the time of the disaster which was certainly not the case. Additionally, incomplete records on passenger cabin location means that we have only plotted a sample of the population of all passengers, and ss such, we were extremely cognizant about not allowing users to draw conclusions that generalize to the entire population of passengers and may not be accurate. We were also conscious of not inferring causation from correlation. For example, class may be correlated with survival, but not necessarily due to the cabin location of a particular class, but instead due to a confounding association between passenger class and societal status which may have led crew members giving these passengers priority access to lifeboats and lifejackets.
+First, it was suggested that we link our class plot graph (association between class and survival rate) better with the other two graphs because it is currently unclear whether or not first, second, or third class passengers would be located on decks. This feedback was very similar to peer feedback we received in milestone 3, suggesting us to “show which cabins belong to which class on each deck level”. However, we concluded in milestone 3 that we were not able to visually implement this on the plot itself because the available data indicates only where first-class cabins are located and we had no information on location of the other classes. The TA’s concern is a little different, that users would not know passengers of a certain “class” would belong on certain “decks”. We decided that users should be able to assume that passengers of classes belong on decks and no clarification should be necessary. 
 
-We received peer feedback in milestone 3 suggesting several changes including making positional changes of interactivities, color and sizing changes for visualizations, and description additions to clarify conceptual terminologies.
-
-We decided to implement five peer-recommended changes:
-
-1. Repositioning the dropdown bar for deck level to be on the right side of the titanic visualization in response to peer feedback indicating this was the most natural place to look for dropdown interactivity  
-
-2. Changing the font size of the note about adjusting the browser. We initially added a note to tell users to adjust their browser to enhance visualization experience, but some peers noted that the note was not clear enough.  
-
-3. Changing the color of bars in the horizontal bar chart to be blue and changing the “passenger survived” bubble to the color bar. Because the amount of blue ink used in the bar chart was analogous to the amount of survival in passengers, we adhered to the principle of proportional ink by keeping the color of “passenger survival” consistent through the titanic visualization and the bar chart visualization.  
-
-4. Changing the default deck level from B to C because deck C had more data points to visualize.  
-
-5. Adding a note that states you can hover over data points for passenger information for additional clarity on how to fully utilize our titanic visualization. In conjunction with this change, we also enlarged the tooltip bubble for better readability. 
-
-We decided NOT to implement four peer-recommended changes:  
-
-1. Adding a note or label to show that the square shape in the titanic visualization represented an empty cabin. We did not go through with this change because the word “cabin” was used in our title but after reconsidering and soliciting additional feedback, we determined that it is quite obvious that a box represents a cabin.
-
-2. Showing which cabins belong to which class on each deck level. Although this was a reasonable suggestion, this is not possible because due to data limitations as the available data indicates only where first-class cabins are located and no information on the other classes.  
-
-3. Changing the word “location” to “deck level”. We decided against this as “location” more holistically describes all three of our plots since the word encompasses both “deck level” and “class” and we are specifically visualizing associations between these attributes and passenger survival.
-
-4. Decreasing the size of the Titanic image at the top of the page. We did not do this because there were actually more people who gave us positive feedback on this aspect of our dashboard including Firas who said that the photo really “sets the tone of our project”. Also, there is a trade-off between maintaining the original aspect ratio of the photo while trying to shrink its height and maintaining its width to match the width of the other frames.  
-
-Below are some general reflections on peer feedback:
-
-- In terms of usability, it was easy for our peers to use the app because there was only one drop down bar which made the interactive element of the app obvious and easy to use, although we did not expect them to look to the right for the dropdown bar. As a result, of this observation, we repositioned the dropdown to the right just above the legend for the deck levels.  
-
-- Two themes emerged looking at the full set of peer feedback: Descriptive clarifications and Visualization schematic adjustments. Peers asked us to either clarify descriptions or add descriptions to better under visualizations. They also often asked us to change the size, positioning, or color of visualizations. 
-
-- The most valuable feedback received was the suggestion to put some background colour on the deck since there was an abundance of whitespace, so we now have a grey background for the cabins which allows the eye to better pick up and contrast the white and red dots denoting survival and non-survival. Although conceptually simplistic, the implications are rather meaningful since the bars and bubbles represent half of the core variable of interest -- i/e. passenger survival.  
-
-- There was no non-valuable feedback per se, and even the somewhat frustrating first part of the exercise in which we were asked to be silent and refrain from any verbal response to peer reaction was ultimately quite fruitful. From our experience as “flies-on-the-wall”, we were able to see the effectiveness of the dashboard on a standalone basis without the benefit of any guidance or pointers. Each of us took copious notes in "fly mode" which were integrated into the dashboard improvements discussed above.
-
-Overall, the feedback was exteremely valuable and our app is now decidedly more effective and user-friendly than it was a week ago.
-
-Last but not least, we implemented a change based on our own experience which was to refactor our code and perform all major data wrangling externally such that we could import wrangled data to our plot functions. This had a significant positive impact on the speed at which our interactive plot updated and enhanced the user experience. 
-
-We are also working on implementing audio by playing the popular Titanic theme song [(#11 best-selling single of all-time)](https://en.wikipedia.org/wiki/List_of_best-selling_singles) when users land on our dashaboard page and displaying a button with an audio gif which allows and will instruct users to click to turn off the music. This was working fine in Python but needs to be debugged for R which we hope to have done by the final submission as this idea, like our image, received overwhelmingly positive feedback when we tested it briefly in the lab.
+Second, it was suggested that we should consider shortening and sorting our commit messages using [DOC] = for documentation updates, [ENH] = for added functionality or interactivity, or [BUG] = for bug fixes. We decided not to implement that changes to maintain consistency of commit communication. Because we did not shorten our commit messages in prior milestones and have been able to communicate effectively, we concluded no change in communication should be implemented as this stage of the project. 

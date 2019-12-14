@@ -30,6 +30,11 @@ graph <- dccGraph(
   figure = facet_plots2()
 )
 
+graph2 <- dccGraph(
+  id = 'survival_legend',
+  figure = facet_plots3()
+)
+
 graph3 <- dccGraph(
   id = 'deck_graph',
   figure = facet_plots1()
@@ -46,6 +51,7 @@ app$layout(
       deckDropdown,
       #end selection components
       graph,
+      graph2,
       graph3,
       htmlIframe(height=20, width=10, style=list(borderWidth = 0)) #space
     )

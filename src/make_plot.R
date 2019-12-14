@@ -201,13 +201,6 @@ facet_plots1 <- function() {
   subplot(plot1, plot2, nrows = 1, titleX = TRUE, titleY = TRUE)
 }
 
-facet_plots3 <- function() {
-  plot1 <- make_died_legend()
-  plot2 <- make_survived_legend()
-  
-  subplot(plot1, plot2, nrows = 1, widths = c(0.1, 0.9))
-}
-
 
 facet_plots2 <- function(deck_level = "C") {
   plot1 <- make_cabin_survival_plot(deck_level)

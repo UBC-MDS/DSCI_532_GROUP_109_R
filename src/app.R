@@ -9,7 +9,7 @@ library(dashTable)
 
 app <- Dash$new(external_stylesheets = "https://codepen.io/chriddyp/pen/bWLwgP.css")
 
-source("make_plot.R")
+source("src/make_plot.R")
 
 deckDropdown <- dccDropdown(
   id = 'deck',
